@@ -53,7 +53,7 @@ const Hero = () => {
         trigger: "video",
         start: startValue,
         end: endValue,
-        scrub: true,
+        scrub: 1,
         pin: true, // pin the video during scroll
       },
     });
@@ -62,10 +62,9 @@ const Hero = () => {
       videoRef.current.onloadedmetadata = () => {
         tl.fromTo(
           videoRef.current,
-          { scale: 0.9 },
+          { scale: 1 },
           {
             currentTime: videoRef.current!.duration,
-            scale: 0.85,
           }
         );
       };
@@ -74,7 +73,7 @@ const Hero = () => {
 
   return (
     <>
-      <section id="hero" className="noisy-">
+      <section id="hero" className="noisy">
         <h1 className="title">NunNun</h1>
         <img
           src="/images/hero-left-leaf.png"
