@@ -43,10 +43,14 @@ const Hero = () => {
         },
       })
       .to(".right-leaf", { x: 200 }, 0)
-      .to(".left-leaf", { x: -200 }, 0);
+      .to(".left-leaf", { x: -200 }, 0)
+      .to(".arrow", { y: 100 }, 0);
+
+    console.log("isMobile", isMobile);
 
     const startValue = isMobile ? "top 50%" : "center 60%";
-    const endValue = isMobile ? "120% top" : "bottom top";
+    const endValue = isMobile ? "220% top" : "bottom top";
+
     // Video scroll animation timeline
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -60,13 +64,9 @@ const Hero = () => {
 
     if (videoRef.current) {
       videoRef.current.onloadedmetadata = () => {
-        tl.fromTo(
-          videoRef.current,
-          { scale: 1 },
-          {
-            currentTime: videoRef.current!.duration,
-          }
-        );
+        tl.to(videoRef.current, {
+          currentTime: videoRef.current!.duration,
+        });
       };
     }
   }, []);
@@ -99,9 +99,7 @@ const Hero = () => {
                 creative flair, and timeless recipes — designed to delight your
                 senses.
               </p>
-              <a href="#cocktails" className="btn">
-                View Cocktails
-              </a>
+              <a href="#cocktails">View Cocktails</a>
             </div>
           </div>
         </div>
@@ -110,11 +108,10 @@ const Hero = () => {
       <div className="video absolute inset-0">
         <video
           ref={videoRef}
-          src="/videos/output.mp4"
-          playsInline // no track, no volume
-          preload="auto"
           muted
-          className="w-full h-full object-cover"
+          playsInline
+          preload="auto"
+          src="/videos/output.mp4"
         />
       </div>
     </>
