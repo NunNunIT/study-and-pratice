@@ -1,2 +1,8 @@
 gsap_cocktails/
 ThreeJS/
+
+# Environment files
+.env
+.env.*
+*env*
+*.env
