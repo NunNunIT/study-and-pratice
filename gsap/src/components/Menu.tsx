@@ -32,6 +32,23 @@ const Menu = () => {
     );
   }, [currentIndex]);
 
+  useGSAP(() => {
+    const parallaxTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#menu",
+        start: "top 50%",
+        scrub: 1,
+      },
+    });
+
+    parallaxTimeline
+      .from("#m-left-leaf", {
+        x: -100,
+        y: 200,
+      })
+      .from("#m-right-leaf", { x: -100, y: 200 }, "0");
+  });
+
   return (
     <section id="menu" aria-labelledby="menu-heading">
       <img

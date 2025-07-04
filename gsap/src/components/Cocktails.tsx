@@ -20,7 +20,7 @@ const Cocktails = () => {
         x: -100,
         y: 100,
       })
-      .from("#c-right-leaf", { x: 100, y: 100 });
+      .from("#c-right-leaf", { x: 100, y: 100 }, "0");
   });
 
   const DrinkItem = ({ drink }: { drink: DrinkType }) => {
