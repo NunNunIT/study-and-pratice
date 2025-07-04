@@ -241,7 +241,7 @@ body {
     }
 
     #art {
-        @apply flex-center flex-col min-h-dvh md:p-5 relative radial-gradient;
+        @apply flex-center flex-col min-h-[90dvh] md:p-5 relative radial-gradient;
 
         h2 {
             @apply relative md:text-[20vw] text-8xl text-nowrap leading-none font-modern-negra text-center text-[#505050] mb-8;
@@ -260,10 +260,10 @@ body {
         }
 
         .cocktail-tabs {
-            @apply grid md:grid-cols-4 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto;
+            @apply flex flex-row justify-center items-center md:gap-20 gap-10 relative w-full max-w-6xl z-10 md:mx-auto overflow-x-auto overflow-hidden;
 
             button {
-                @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-modern-negra;
+                @apply md:text-3xl text-xl w-fit text-nowrap pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-modern-negra;
             }
         }
 
@@ -271,7 +271,7 @@ body {
             @apply flex flex-col justify-between items-center container mx-auto relative;
 
             .arrows {
-                @apply flex items-center justify-between w-full absolute;
+                @apply h-2/3 flex items-center justify-between w-full absolute;
 
                 button {
                     @apply text-white hover:text-yellow cursor-pointer transition-colors max-w-36;
@@ -287,7 +287,7 @@ body {
             @apply flex-center md:mt-10;
 
             img {
-                @apply object-contain h-[60vh];
+                @apply object-contain h-[60dvh] top-0;
             }
         }
 
