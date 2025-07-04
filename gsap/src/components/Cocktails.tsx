@@ -38,14 +38,7 @@ const Cocktails = () => {
   };
 
   return (
-    <section id="cocktails" className="noisy">
-      <img src="/images/cocktail-left-leaf.png" alt="l-leaf" id="c-left-leaf" />
-      <img
-        src="/images/cocktail-right-leaf.png"
-        alt="r-leaf"
-        id="c-right-leaf"
-      />
-
+    <section id="cocktails" className="noisy w-full !relative">
       <div className="list">
         <div className="popular">
           <h2 className="title">Popular Cocktails</h2>
@@ -69,6 +62,18 @@ const Cocktails = () => {
           </ul>
         </div>
       </div>
+      <img
+        src="/images/cocktail-left-leaf.png"
+        alt="l-leaf"
+        id="c-left-leaf"
+        className="absolute left-0 bottom-0 md:w-fit w-1/4"
+      />
+      <img
+        src="/images/cocktail-right-leaf.png"
+        alt="r-leaf"
+        id="c-right-leaf"
+        className="absolute right-0 bottom-0 md:w-fit w-1/4"
+      />
     </section>
   );
 };

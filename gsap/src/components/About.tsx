@@ -50,7 +50,7 @@ const About = () => {
   });
 
   return (
-    <div id="about">
+    <section id="about" className="z-50 bg-black">
       <div className="mb-16 md:px-0 px-5">
         <div className="content">
           <div className="md:col-span-8">
@@ -108,7 +108,7 @@ const About = () => {
           <img src="/images/abt4.png" alt="grid-img-4" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

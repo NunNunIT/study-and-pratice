@@ -46,10 +46,8 @@ const Hero = () => {
       .to(".left-leaf", { x: -200 }, 0)
       .to(".arrow", { y: 100 }, 0);
 
-    console.log("isMobile", isMobile);
-
     const startValue = isMobile ? "top 50%" : "center 60%";
-    const endValue = isMobile ? "220% top" : "bottom top";
+    const endValue = isMobile ? "230% top" : "bottom top";
 
     // Video scroll animation timeline
     const tl = gsap.timeline({
@@ -111,6 +109,7 @@ const Hero = () => {
           muted
           playsInline
           preload="auto"
+          className="video"
           src="/videos/output.mp4"
         />
       </div>
