@@ -16,7 +16,7 @@ const About = () => {
     const scrollTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#about",
-        start: "top 80%",
+        start: "top bottom",
         end: "bottom 80%",
         scrub: 1,
       },
@@ -33,7 +33,7 @@ const About = () => {
       .from(descSplit.lines, {
         opacity: 0,
         yPercent: 100,
-        duration: 1,
+        duration: 0.5,
         stagger: 0.05,
         ease: "expo.out",
       },"-=0.05")
@@ -43,9 +43,9 @@ const About = () => {
           opacity: 0,
           duration: 1,
           ease: "power1.out",
-          stagger: 0.1,
+          stagger: 0.05,
         },
-        "-=0.5" // start this animation 0.5 seconds before the previous one ends
+        "-=0.05" // start this animation 0.5 seconds before the previous one ends
       );
   });
 
