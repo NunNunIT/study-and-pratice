@@ -36,14 +36,14 @@ const About = () => {
         duration: 1,
         stagger: 0.05,
         ease: "expo.out",
-      },"-=0.1")
+      },"-=0.05")
       .from(
         ".top-grid div, .bottom-grid div, .rating p",
         {
           opacity: 0,
           duration: 1,
           ease: "power1.out",
-          stagger: 0.04,
+          stagger: 0.1,
         },
         "-=0.5" // start this animation 0.5 seconds before the previous one ends
       );
