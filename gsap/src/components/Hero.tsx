@@ -60,13 +60,13 @@ const Hero = () => {
       },
     });
 
-    if (videoRef.current) {
-      videoRef.current.onloadedmetadata = () => {
-        tl.to(videoRef.current, {
-          currentTime: videoRef.current!.duration,
-        });
-      };
-    }
+    // if (videoRef.current) {
+    //   videoRef.current.onloadedmetadata = () => {
+    //     tl.to(videoRef.current, {
+    //       currentTime: videoRef.current!.duration,
+    //     });
+    //   };
+    // }
   }, []);
 
   return (
@@ -107,8 +107,10 @@ const Hero = () => {
         <video
           ref={videoRef}
           muted
-          playsInline
-          preload="auto"
+          autoPlay
+          loop
+          // playsInline
+          // preload="auto"
           className="video"
           src="/videos/output.mp4"
         />
