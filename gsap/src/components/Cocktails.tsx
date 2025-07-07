@@ -1,4 +1,3 @@
-import React from "react";
 import { cocktailLists, mockTailLists } from "../../constants";
 import type { DrinkType } from "../types/types";
 import { useGSAP } from "@gsap/react";

@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/all";
 import { useMediaQuery } from "react-responsive";
@@ -50,7 +50,7 @@ const Hero = () => {
     const endValue = isMobile ? "230% top" : "bottom top";
 
     // Video scroll animation timeline
-    const tl = gsap.timeline({
+    gsap.timeline({
       scrollTrigger: {
         trigger: "video",
         start: startValue,

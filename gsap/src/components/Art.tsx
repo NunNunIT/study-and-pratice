@@ -1,11 +1,11 @@
-import React from "react";
 import { featureLists, goodLists } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+// import LazyLoad from 'react-lazyload'
 
 const Art = () => {
   useGSAP(() => {
-    const maslTimeline = gsap
+    gsap
       .timeline({
         scrollTrigger: {
           trigger: "#art",
@@ -45,11 +45,16 @@ const Art = () => {
         <h2 className="will-fade">The ART</h2>
         <div className="absolute flex flex-col justify-between items-center top-0 left-1/2 -translate-x-1/2 md:top-1/3 md:-translate-y-1/2 w-full masked-container md:pt-20">
           <div className="h-2/3 overflow-hidden">
-            <img
+              <img
+                src="/images/under-img.jpg"
+                alt="cocktail"
+                className="masked-img size-full object-contain"
+              />
+            {/* <img
               src="/images/under-img.jpg"
               alt="cocktail"
               className="masked-img size-full object-contain"
-            />
+            /> */}
           </div>
 
           <h2 className="will-fade h-1/3 opacity-100 text-white text-3xl md:text-6xl px-5">

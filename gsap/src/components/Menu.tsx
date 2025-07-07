@@ -46,7 +46,7 @@ const Menu = () => {
         x: -100,
         y: 200,
       })
-      .from("#m-right-leaf", { x: -100, y: 200 }, "0");
+      .from("#m-right-leaf", { x: 0, y: -50 }, "0");
   });
 
   return (
